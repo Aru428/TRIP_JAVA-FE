@@ -1,0 +1,30 @@
+.planner_page_all {
+  overflow: scroll;
+  height: 100vh;
+  position: relative;
+  margin: 65px 30px 0 30px;
+  h2 {
+    font-family: var(--pointfont);
+  }
+}
+
+.pins_and_block {
+  display: flex;
+}
+
+.kakaoshare_top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.kakao_share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
+
+#kakaotalk-sharing-btn {
+  cursor: pointer; // 이 부분을 추가합니다.
+}

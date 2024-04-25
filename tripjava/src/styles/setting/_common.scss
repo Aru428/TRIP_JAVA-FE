@@ -2,11 +2,12 @@
 body {
   width: 100vw;
   min-height: 100%;
-  color: var(--main-white);
-  font-family: var(--mainfont-SUIT);
+  color: var(--main-black);
+  font-family: var(--mainfont);
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
   position: relative; /* 추가 */
   z-index: 1; /* 추가 */
+  user-select: none;
 }

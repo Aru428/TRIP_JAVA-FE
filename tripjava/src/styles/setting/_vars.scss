@@ -1,16 +1,21 @@
 // 메인 폰트, 컬러
-// $main-white: #000000;
-// $main-color: #000000;
-// $main-black: #000000;
+$main-white: #ebe8e6;
+$main-color: #c1987d;
+$main-black: #2d2113;
+$map-delete: #b9d3c2;
+$map-hcolor: #e98d58;
 
 :root {
   // 메인 폰트, 컬러
-  // --mainfont-SUIT: 'SUIT-Regular';
-  // --main-white: #eee;
-  // --main-color: rgba(255, 255, 255, 0.851);
-  // --main-bgcolor: rgba(255, 255, 255, 0.15);
-  // --main-button: rgba(255, 255, 255, 0.3);
-  // --main-black: #333;
+  --mainfont: 'SUIT-Regular';
+  --pointfont: 'MBC1961GulimM';
+  --main-white: rgb(255, 253, 250);
+  --main-grey: rgb(232, 223, 206);
+  --main-color: #c1987d;
+  --main-hove-color: #ecb159;
+  --main-bgcolor: rgb(237, 217, 171);
+  --main-button: rgba(127, 182, 160, 0.1);
+  --main-black: #333;
 
   //폰트 셋팅
   font-family: var(--mainfont-SUI);
@@ -19,14 +24,14 @@
   font-weight: 400;
 
   // 배경 색상 요소
-  // --color-bg1: rgb(108, 0, 162);
-  // --color-bg2: rgb(8, 17, 82);
-  // --color1: 18, 113, 255;
-  // --color2: 221, 74, 255;
-  // --color3: 180, 220, 255;
-  // --color4: 200, 50, 50;
-  // --color5: 180, 180, 50;
-  // --color-interactive: 140, 100, 255;
-  // --circle-size: 80%;
-  // --blending: hard-light;
+  --color-bg1: rgb(108, 0, 162);
+  --color-bg2: rgb(8, 17, 82);
+  --color1: 18, 113, 255;
+  --color2: 221, 74, 255;
+  --color3: 180, 220, 255;
+  --color4: 200, 50, 50;
+  --color5: 180, 180, 50;
+  --color-interactive: 140, 100, 255;
+  --circle-size: 80%;
+  --blending: hard-light;
 }

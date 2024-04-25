@@ -1,0 +1,123 @@
+.test_PlannerTable {
+  @include flex-center;
+  display: flex;
+  overflow-x: auto;
+  width: 100%;
+  // background-color: rgb(235, 167, 189);
+  padding: 20px;
+
+  // background-color: rgb(71, 151, 30);
+}
+
+.day-table {
+  border-collapse: separate !important;
+  border-spacing: 8px 0px;
+  background-color: white;
+
+  td {
+    // background-color: rgb(218, 208, 226);
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-top: 0 !important;
+
+    &.merged {
+      background-color: rgb(205, 49, 59);
+    }
+  }
+
+  .times {
+    background-color: #a5b075;
+    border-bottom: 0 !important;
+    border-radius: 10px 0px 0px 10px;
+  }
+
+  .plans {
+    background-color: rgba(#a5b075, 0.6);
+    border-radius: 0px 10px 10px 0px;
+  }
+
+  thead {
+    th {
+      // background-color: rgb(170, 209, 151);
+      border: 0 !important;
+      font-family: var(--pointfont);
+      font-weight: lighter;
+      font-size: 16px;
+    }
+  }
+}
+
+.selected {
+  background-color: #a0d0e0; /* 예시 색상 */
+}
+
+.color_test_0 {
+  background-color: rgba(#da675d, 0.6) !important; /* 빨간색 */
+
+  border: 0 !important;
+}
+
+.color_test_1 {
+  background-color: rgba(#6653a4, 0.6) !important; /* 초록색 */
+
+  border: 0 !important;
+}
+
+.color_test_2 {
+  background-color: rgba(#4c73af, 0.6) !important; /* 파란색 */
+  border: 0 !important;
+}
+
+.color_test_3 {
+  background-color: rgba(#f2c218, 0.6) !important; /* 파란색 */
+  border: 0 !important;
+}
+.color_test_4 {
+  background-color: rgba(255, 34, 0, 0.656) !important; /* 파란색 */
+  border: 0 !important;
+}
+
+.color_test_5 {
+  background-color: rgba(216, 112, 147, 0.795) !important; /* 파란색 */
+  border: 0 !important;
+}
+
+.color_test_6 {
+  background-color: rgba(#bdca818c, 0.6) !important; /* 파란색 */
+  border: 0 !important;
+}
+.color_test_7 {
+  background-color: rgba(176, 164, 180, 0.657) !important; /* 파란색 */
+  border: 0 !important;
+}
+.color_test_8 {
+  background-color: rgb(58, 143, 148) !important; /* 파란색 */
+  border: 0 !important;
+}
+
+.merge-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+
+  // box-shadow: inset 0 3px 0 0 white;
+}
+.merge-bottom {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  // box-shadow: inset 0 -3px 0 0 white;
+}
+
+.onlyone {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.adjacent-top {
+  border-bottom: 0 !important;
+}
+
+.adjacent-bottom {
+  border-top: 0 !important;
+}

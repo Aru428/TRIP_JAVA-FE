@@ -1,17 +1,68 @@
-.form-wrap {
+.wrap {
+  @include position-center;
   @include flex-center;
+  width: 100%;
   height: 100%;
+  overflow-y: auto;
+  padding-top: 20rem;
+  padding-bottom: 5rem;
+  align-items: flex-start;
 
   .myPage-form {
     @include container;
-    // transform: translateY(-5rem);
-    // flex-direction: column;
+
+    display: flex;
+    transform: translateY(-5rem);
     padding: 3em;
     border: 0;
+    width: 350px;
+
+    margin-bottom: 5rem;
+    margin: 1rem;
+
+    .tourlist {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
     border: {
       radius: 16px;
       top: 0.5px solid var(--main-white);
       left: 0.5px solid var(--main-white);
+    }
+
+    &.mypage {
+      @include flex-center;
+      height: 400px;
+    }
+
+    &.tours {
+      // background-color: aqua;
+      flex-direction: column;
+    }
+
+    .delete-part {
+      width: 100%;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .delete-btn {
+      width: 70px;
+      height: 30px;
+      font-size: 15px;
+      padding: 2px;
+      margin: 10px 0 10px 10px;
+      font-weight: bold;
+    }
+
+    div {
+      // .myPage-form과 동시에 반응형으로 움직여야함
+      // font-size: 18px;
+      margin-top: 7px;
     }
 
     h1 {
@@ -26,6 +77,13 @@
         width: 100%;
       }
     }
+
+    h2 {
+      margin: 0;
+      font-family: var(--pointfont);
+      font-weight: lighter;
+    }
+
     .input-wrap {
       display: flex;
       flex-direction: column;
@@ -48,17 +106,6 @@
         outline: 0;
       }
 
-      .alert {
-        display: block;
-        height: 1.5em;
-        font-size: 14px;
-        color: var(--main-black);
-        text-align: center;
-        margin: 0;
-      }
-      label {
-        // cursor: pointer;
-      }
       .img-wrap {
         input {
           display: none;
@@ -83,15 +130,20 @@
       }
     }
     button {
+      font-family: var(--pointfont);
+      color: #333333 !important;
+      font-weight: lighter !important;
       width: 100%;
       border-radius: 10px;
       padding: 0.5em;
       padding-left: 1em;
       font-size: 1.2em;
+      margin-top: 1rem;
       cursor: pointer;
       background-color: var(--main-bgcolor);
       color: var(--main-black);
-      border: 1px solid var(--main-white);
+      border: transparent;
+      font-weight: bold;
       &:hover {
         background-color: var(--main-button);
         color: #000;
@@ -106,5 +158,10 @@
         cursor: pointer;
       }
     }
+  }
+  @media (max-width: 768px) {
+    @include flex-center;
+    padding-top: 30rem;
+    flex-direction: column;
   }
 }

@@ -1,11 +1,47 @@
 // 박스 디자인(공통 디자인) -------------------------------------
 
 @mixin container {
-  background-color: var(--main-bgcolor);
+  background-color: var(--main-white);
   color: var(--main-color);
-  border: 1px solid var(--main-white);
+  // border: 1px solid var(--main-white);
+  // border-radius: 10px;
+}
+
+@mixin input-box {
+  width: 100%;
   border-radius: 10px;
-  backdrop-filter: blur(30px);
+  padding: 0.5em;
+  padding-left: 1em;
+  font-size: 1.2em;
+  background-color: transparent;
+  border: 1px solid var(--main-grey);
+}
+
+// 버튼 관련
+@mixin main-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  padding: 0.5em;
+  font-size: 1.2em;
+  cursor: pointer;
+  background-color: var(--main-bgcolor);
+  color: var(--main-black);
+  border: none;
+  &:hover {
+    background-color: var(--main-hove-color);
+    color: #000;
+  }
+}
+
+@mixin h3-tag {
+  color: $map-hcolor;
+  margin: 5px 0 5px 3px;
+  font-family: var(--pointfont);
+  font-weight: lighter;
+  font-size: 16px;
 }
 
 @mixin s-box {
@@ -13,35 +49,6 @@
   color: var(--main-color);
   border: 1px solid var(--main-white);
   border-radius: 5px;
-}
-
-@mixin main-button {
-  background-color: var(--main-button);
-  color: var(--main-color);
-  border: 0;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-// market editor용
-@mixin market-s-box {
-  background-color: transparent;
-  color: var(--main-color);
-  border: 1px solid var(--main-white);
-  border-radius: 5px;
-}
-
-// 메뉴 호버
-@mixin hover {
-  transition: all 0.3s;
-  color: #000000;
-  text-shadow: 0 0 10px #000000;
-  transform: translateY(-3px);
-}
-
-@mixin thum-hover {
-  transition: all 0.3s;
-  box-shadow: 0 0 20px 1px rgba(255, 255, 255, 0.212);
 }
 
 @mixin active {
@@ -95,14 +102,6 @@
   padding: 20px;
   margin: 100px 0px 0px 0px;
   justify-content: center;
-}
-
-// 컨테이너 박스 가운데 정렬
-@mixin center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 @mixin button-size {

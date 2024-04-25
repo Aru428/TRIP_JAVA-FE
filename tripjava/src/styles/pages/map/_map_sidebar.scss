@@ -1,0 +1,295 @@
+.sidebar_name {
+  width: 100%;
+  input {
+    width: 100%;
+    height: 40px;
+    appearance: none;
+    border: none;
+    outline: none;
+    border-bottom: 0.2em solid #a5b075;
+    background: rgba(#a5b075, 0.6);
+    border-radius: 5px 5px 0 0;
+    padding: 0.4em;
+    color: #2d2013;
+    font-size: 19px;
+    font-family: var(--pointfont);
+  }
+}
+
+.side_menu {
+  background-color: #f9f7f5 !important;
+  @include container;
+  z-index: 100;
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  width: 300px;
+  overflow: scroll;
+  .sidebar_content {
+    padding: 0 20px 20px 20px;
+    height: 100%;
+  }
+  .sidebar_header {
+    margin-top: 5px;
+    height: 78px;
+  }
+  .sidebar_date {
+    margin: 10px 0 5px 0;
+    font-family: var(--pointfont);
+    font-size: 14px;
+    h3 {
+      @include h3-tag;
+    }
+    div {
+      margin: 5px 0 0 3px;
+    }
+  }
+}
+li {
+  display: flex;
+  align-items: center;
+  img.mark {
+    width: 1rem;
+    height: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.sidebar_tabs {
+  display: flex;
+  flex-direction: column;
+  div {
+    .sidebar_date {
+      width: 100%;
+      @include h3-tag;
+      @include main-button;
+      border-radius: 7px !important;
+      font-size: 12.5px !important;
+      margin: 3px 10px 5px 0;
+    }
+  }
+}
+
+.sidebar_hotel {
+  h3 {
+    @include h3-tag;
+  }
+  .sidebar_hotel_container {
+    div {
+      @include input-box;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      white-space: nowrap;
+      // box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.034);
+      // overflow: hidden;
+      // text-overflow: ellipsis;
+      font-size: 14px;
+      h4 {
+        margin: 0;
+        vertical-align: middle;
+        svg {
+          vertical-align: middle;
+          margin: 0 1px 2px 3px;
+        }
+      }
+    }
+    button {
+      margin-left: auto;
+      padding-top: 4px;
+      background-color: transparent;
+      border: none;
+      svg {
+        cursor: pointer;
+        color: $map-delete;
+      }
+    }
+  }
+}
+.sidebar_route {
+  overflow: scroll;
+  h3 {
+    @include h3-tag;
+  }
+  div {
+    @include input-box;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    // box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.034);
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    font-size: 14px;
+    h4 {
+      margin: 0;
+    }
+    button {
+      margin-left: auto;
+      padding-top: 4px;
+      background-color: transparent;
+      border: none;
+      svg {
+        cursor: pointer;
+        color: $map-delete;
+      }
+    }
+  }
+}
+.sidebar_footter {
+  border-top: 0.2em solid #a5b074be;
+  margin-top: 10px;
+  bottom: 0;
+  display: flex;
+  justify-content: flex;
+
+  button {
+    @include h3-tag;
+    width: 100%;
+
+    @include main-button;
+    margin: 8px 0 0 0 !important;
+    font-size: 19px !important;
+    border-radius: 7px !important;
+    font-size: 15px !important;
+    background-color: rgba(#a5b075, 0.6) !important;
+    &:hover {
+      background-color: #a5b075 !important;
+      color: #000 !important;
+    }
+  }
+}
+//////////// nearby 관련
+
+.nearby_margin {
+  width: 300px;
+  height: 63px;
+}
+.nearby_header {
+  width: 100%;
+  height: 40px;
+  appearance: none;
+  border: none;
+  outline: none;
+  border-bottom: 0.2em solid #a5b075;
+  background: rgba(#a5b075, 0.6);
+  border-radius: 5px 5px 0 0;
+  padding: 0.4em;
+  color: #2d2013;
+  font-size: 19px;
+  font-family: var(--pointfont);
+  margin-bottom: 13px;
+}
+
+.nearby_menu {
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0);
+  background-color: #f9f7f5 !important;
+  @include container;
+  z-index: 100;
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  width: 300px;
+  margin-left: 300px;
+  overflow: scroll;
+
+  .nearby_content {
+    padding: 20px;
+    // .nearby_header {
+    //   h3 {
+    //     @include h3-tag;
+    //   }
+    // }
+    .nearby_category {
+      display: flex;
+      width: 100%;
+      margin-bottom: 13px;
+      button.nearby_spot {
+        width: 100%;
+        @include h3-tag;
+        @include main-button;
+        border-radius: 7px !important;
+        font-size: 0.8em !important;
+        &.btn1 {
+          margin: 0 5px 0 0 !important;
+        }
+        &.btn2 {
+          margin: 0 0 0 5px !important;
+        }
+      }
+    }
+    .nearby_item {
+      @include input-box;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      // box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.034);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 14px;
+      height: 37px;
+      .nearby_imgcontainer {
+        @include flex-center;
+        overflow: hidden;
+        width: 27px;
+        height: 27px;
+        border-radius: 6px;
+        margin-right: 10px;
+        z-index: 10;
+        position: relative;
+        h4 {
+          margin: 0;
+        }
+        img {
+          display: block;
+          width: auto;
+          height: 100%;
+        }
+        &::before {
+          content: ''; // 가상 요소를 생성합니다.
+          position: absolute; // 이미지와 겹치도록 절대적으로 위치를 설정합니다.
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #ffc80059; // 원하는 배경색을 지정합니다.
+          mix-blend-mode: multiply; // 배경색과 이미지를 혼합하는 방식을 지정합니다.
+          z-index: 1; // 이미지 아래에 배경색을 표시하기 위해 z-index를 설정합니다.
+        }
+      }
+      button {
+        margin-left: auto;
+        padding-top: 5px;
+        background-color: transparent;
+        border: none;
+        svg {
+          margin: 0 1px 0 3px;
+          cursor: pointer;
+          color: $map-delete;
+        }
+      }
+    }
+  }
+}
+
+button.nearby_toggle {
+  background-color: #f9f7f5 !important;
+  @include flex-center;
+  border-radius: 0 5px 5px 0;
+
+  svg {
+    color: #e98d58;
+    padding-left: 1px;
+    width: 85%;
+    height: 100%;
+  }
+}
